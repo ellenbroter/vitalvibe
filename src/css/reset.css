@@ -17,6 +17,10 @@ a, img, span, input, button, ion-icon {
 	display: block; 
 }
 
+img { 
+	height: auto; 
+ }
+
 button, input {
 	background: none;
 	border: none;

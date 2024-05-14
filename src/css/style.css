@@ -146,6 +146,80 @@
   pointer-events: all;
 }
 
+/* MAIN */
+
+.h1, .h2, .h3 {
+  color: hsl(32, 24%, 14%);
+  font-family: 'Playfair';
+  line-height: 1.1;
+}
+.h1 { 
+  font-size: 3.6rem; 
+}
+.h2 { 
+  font-size: 2.4rem; 
+}
+.h3 {
+  font-size: 2rem; 
+}
+.grid-list {
+  display: grid;
+  gap: 50px;
+}
+.img-holder {
+  background-color: hsl(0, 0%, 80%);
+}
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero {
+  padding-block: 130px 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 25%;
+}
+.hero-subtitle {
+  color: hsl(165, 77%, 17%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.hero-title { 
+  margin-block: 16px 30px; 
+}
+.hero-text {
+  color: hsl(32, 24%, 14%);
+  font-weight: 600;
+}
+.hero .btn { 
+  margin-block: 20px; 
+}
+.hero :is(.social-wrapper, .social-list) {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.hero .social-title {
+  color: hsl(32, 24%, 14%);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.hero .social-link {
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid hsla(165, 77%, 17%, 0.1);
+  border-radius: 50%;
+  transition: 0.25s ease;;
+}
+.hero .social-link:is(:hover, :focus) {
+  background-color: hsl(165, 77%, 17%);
+  border-color: hsl(165, 77%, 17%);
+  color: white;
+}
+
 /* FOOTER */
 
 .footer-top {
@@ -371,7 +445,7 @@ address {
   :root {
     padding-block: 140px;
   }
-  h1 {
+  .h1 {
     font-size: 8rem;
   }
   .container { 

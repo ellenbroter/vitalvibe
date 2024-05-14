@@ -4,12 +4,6 @@
 	box-sizing: border-box;
 }
 
-:root {
-	--ff-monsterrat: 'Montserrat', sans-serif;
-	--ff-playfair: 'Playfair Display', serif;
-
-}
-
 li { 
 	list-style: none; 
 }
@@ -38,7 +32,7 @@ input {
 
 
 html {
-	font-family: var(--ff-montserrat);
+	font-family: 'Monsterrat';
 	font-size: 10px;
 	scroll-behavior: smooth;
  }

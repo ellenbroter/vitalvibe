@@ -10,9 +10,10 @@ li {
 
 a { 
 	text-decoration: none; 
+	color: inherit;
 }
 
-a, img, span, label, input, button, ion-icon { 
+a, img, span, input, button, ion-icon { 
 	display: block; 
 }
 
@@ -30,6 +31,9 @@ input {
 	width: 100%; 
 }
 
+ion-icon { 
+	pointer-events: none; 
+}
 
 html {
 	font-family: 'Monsterrat';

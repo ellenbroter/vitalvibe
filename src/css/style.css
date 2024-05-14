@@ -8,7 +8,7 @@
   font-weight: 600;
   max-width: max-content;
   padding: 8px 20px;
-  border-radius: 50%;
+  border-radius: 50px;
   transition: 0.25s ease;
 }
 
@@ -20,6 +20,10 @@
 .btn-secondary,
 .btn-primary:is(:hover, :focus) { 
 	background-color: hsl(38, 100%, 50%); 
+}
+
+.section { 
+  padding-block: 60px; 
 }
 
 [data-section] > * {
@@ -140,4 +144,117 @@
 .overlay.active {
   opacity: 1;
   pointer-events: all;
+}
+
+/* FOOTER */
+
+.footer-top {
+  background-color: hsl(165, 77%, 17%);
+  color: white;
+}
+
+.footer-top .container {
+  display: grid;
+  gap: 50px;
+}
+
+.footer-list-title {
+  color: hsl(38, 100%, 50%);
+  font-family: 'Playfair Display';
+  font-size: 2rem;
+  font-weight: 600;
+  margin-block-end: 28px;
+}
+
+.footer-form { 
+  margin-block-start: 50px; 
+}
+
+.footer-top .email-field {
+  background-color: white;
+  color: hsl(32, 24%, 14%);
+  padding: 11px 30px;
+  border-radius: 10px;
+  margin-block-end: 20px;
+}
+
+.footer-top .email-field::placeholder { 
+  color: inherit; 
+}
+
+.footer-top .btn-secondary { 
+  border-radius: 10px; 
+}
+
+.footer-top .btn-secondary:is(:hover, :focus) {
+  background-color: white;
+  color: hsl(210, 10%, 23%);
+}
+
+.footer-link,
+.address {
+  font-size: 1.4rem;
+  margin-block-start: 12px;
+  transition: 0.25s ease;
+}
+
+.address-title { 
+  margin-block: 12px; 
+}
+
+.footer-link:is(:hover, :focus),
+.footer-bottom-link:is(:hover, :focus) { 
+  color: hsl(38, 100%, 50%); 
+}
+
+.footer-bottom {
+  background-color: hsl(165, 77%, 15%);
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-block: 25px;
+}
+
+address { 
+  font-style: normal; 
+}
+
+.copyright { 
+  margin-block-end: 25px; 
+}
+
+.copyright :is(.copyright-link, ion-icon) {
+  display: inline-block;
+  color: hsl(38, 100%, 50%);
+}
+
+.copyright ion-icon {
+  font-size: 18px;
+  margin-block-end: -4px;
+}
+
+.copyright-link:is(:hover, :focus) {
+   text-decoration: underline; 
+  }
+
+.footer-bottom-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 10px;
+}
+
+.footer-bottom-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.footer-bottom-item:not(:last-child)::after {
+  content: "-";
+  margin-inline: 10px;
+}
+
+.footer-bottom-link { 
+  transition: 0.25s ease; 
 }

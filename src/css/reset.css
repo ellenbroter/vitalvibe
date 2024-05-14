@@ -4,31 +4,68 @@
 	box-sizing: border-box;
 }
 
-li { list-style: none; }
+:root {
+	--ff-monsterrat: 'Montserrat', sans-serif;
+	--ff-playfair: 'Playfair Display', serif;
 
-a { text-decoration: none; }
+}
 
-a,
-img,
-span,
-label,
-input,
-button { display: block; }
+li { 
+	list-style: none; 
+}
 
-button,
-input {
+a { 
+	text-decoration: none; 
+}
+
+a, img, span, label, input, button, ion-icon { 
+	display: block; 
+}
+
+button, input {
 	background: none;
 	border: none;
 	font: inherit;
 }
 
-button { cursor: pointer; }
+button { 
+	cursor: pointer; 
+}
 
-input { width: 100%; }
+input { 
+	width: 100%; 
+}
 
 
 html {
-	font-size: 1rem;
-	line-height: 1.5;
+	font-family: var(--ff-montserrat);
+	font-size: 10px;
 	scroll-behavior: smooth;
+ }
+
+body {
+	background-color: white;
+	color: hsl(213, 5%, 34%);
+	font-size: 1.6rem;
+	line-height: 1.75;
+}
+
+:focus-visible { 
+	outline-offset: 4px;
+}
+
+::-webkit-scrollbar { 
+	width: 10px; 
+}
+
+::-webkit-scrollbar-track { 
+	background-color: hsl(0, 0%, 98%); 
+}
+
+::-webkit-scrollbar-thumb { 
+	background-color: hsl(0, 0%, 80%); 
+}
+
+::-webkit-scrollbar-thumb:hover { 
+	background-color: hsl(0, 0%, 70%);
 }

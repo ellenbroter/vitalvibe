@@ -20,29 +20,58 @@ const frontPage = document.querySelector(".front-page");
 const secretSection = document.querySelector(".secret-section");
 
 
-signUpButton.addEventListener("click", (event)=> {
-	event.preventDefault();
-	createUserWithEmailAndPassword(authService, emailInput.value, passwordInput.value)
-	.then(()=> {
-		checkAuthStateAndRender();
-	})
-	.catch((error)=> {
-		errorMessage.style.display = "block";
-		errorMessage.textContent = error.message
-	})
-})
+const validateForm = (email, password) => {
+  if (!email.includes('@') || emailInput.length === 0) {
+      return 'Email must contain an "@" symbol.';
+  }
+  if (password.length < 6 || passwordInput.length === 0) {
+      return 'Password must be at least 6 characters long.';
+  }
+  return '';
+}
 
-signInButton.addEventListener("click", (event)=> {
-	event.preventDefault();
-	signInWithEmailAndPassword(authService, emailInput.value, passwordInput.value)
-	.then(()=> {
-		checkAuthStateAndRender();
-	})
-	.catch((error)=> {
-		errorMessage.style.display = "block";
-		errorMessage.textContent = error.message
-	})
-})
+signUpButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  const email = emailInput.value;
+  const password = passwordInput.value;
+  const validationError = validateForm(email, password);
+
+  if (validationError) {
+      errorMessage.style.display = "block";
+      errorMessage.textContent = validationError;
+  } else {
+      createUserWithEmailAndPassword(authService, email, password)
+      .then(() => {
+          checkAuthStateAndRender();
+      })
+      .catch((error) => {
+          errorMessage.style.display = "block";
+          errorMessage.textContent = 'Please use a valid email or password';
+      });
+  }
+});
+
+signInButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  const email = emailInput.value;
+  const password = passwordInput.value;
+  const validationError = validateForm(email, password);
+
+  if (validationError) {
+      errorMessage.style.display = "block";
+      errorMessage.textContent = validationError;
+  } else {
+      signInWithEmailAndPassword(authService, email, password)
+      .then(() => {
+          checkAuthStateAndRender();
+      })
+      .catch((error) => {
+          errorMessage.style.display = "block";
+          errorMessage.textContent = 'Please use a valid email or password';
+      });
+  }
+});
+
 
 signOutButton.addEventListener("click", ()=> {
 	signOut(authService)

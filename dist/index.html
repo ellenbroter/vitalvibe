@@ -3,14 +3,52 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Super secret society</title>
 
+		<link rel="shortcut icon" href="../src/assets/images/favicon.svg" type="image/svg+xml">
+		<title>VitalVibe</title>
+
+		<link rel="shortcut icon" href="../src/assets/images/favicon.svg" type="image/svg+xml">
 		<link rel="stylesheet" href="../src/css/style.css">
+		<link rel="stylesheet" href="../src/css/reset.css">
+		<link rel="stylesheet" href="../src/css/fonts.css">
+
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 	</head>
-	<body>
-		<header>
-			<h1>Welcome</h1>
-			<button class="sign-out-button">Sign out</button>
+
+	<body id="top">
+		<header class="header" data-header>
+			<div class="container">
+			  <a href="#" class="logo">
+				 VitalVibe<span class="span">.</span>
+			  </a>
+			  <nav class="navbar" data-navbar>
+				 <button class="nav-toggle-btn" aria-label="close menu" data-nav-toggler>
+					<ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+				 </button>
+				 <ul class="navbar-list">
+					<li class="navbar-item">
+					  <a href="#home" class="navbar-link" data-nav-link>Home</a>
+					</li>
+					<li class="navbar-item">
+					  <a href="#about" class="navbar-link" data-nav-link>About Us</a>
+					</li>
+					<li class="navbar-item">
+					  <a href="#course" class="navbar-link" data-nav-link>All Courses</a>
+					</li>
+					<li class="navbar-item">
+					  <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+					</li>
+					<li class="navbar-item">
+					  <a href="#" class="navbar-link" data-nav-link>Contact</a>
+					</li>
+				 </ul>
+			  </nav>
+			  <a href="#" class="btn btn-primary sign-out-button">Sign Out</a>
+			  <button class="nav-toggle-btn" aria-label="open manu" data-nav-toggler>
+				 <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+			  </button>
+			  <div class="overlay" data-nav-toggler data-overlay></div>
+			</div>
 		</header>
 	
 		<section class="front-page">
@@ -21,29 +59,197 @@
 				<label for="password">Password</label>
 				<input type="password" class="password" id="password">
 	
-				<p class="error-message">Error</p>
+				<p class="error-message"></p>
 	
-				<button class="sign-in-button">Sign In</button>
-				<button class="sign-up-button">Create account</button>
+				<button class="btn btn-primary sign-in-button">Sign In</button>
+				<button class="btn btn-secondary sign-up-button">Create account</button>
 			</form>
 		</section>
 	
-		<section class="secret-section">
-			<h1>Welcome to the super secret society</h1>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio optio placeat eligendi officiis nemo id, libero impedit repellat, omnis dolore illum non nihil fugiat! Architecto dolore voluptatem quidem doloribus sapiente.
-			Omnis ex dolore, quaerat adipisci nemo voluptas, porro quibusdam ipsa mollitia voluptatum, aliquam eum vero dolores vitae quas nulla officiis fuga at aspernatur fugit quo sint. Ducimus sed libero necessitatibus.
-			Laudantium saepe corrupti cumque, quam, veniam, ex minima sint eos alias perferendis cum asperiores porro quasi quas distinctio. Sit culpa distinctio at beatae fugiat deleniti quasi? Nesciunt corrupti beatae provident.
-			Nesciunt aut dignissimos ea recusandae repellat similique magnam ut adipisci voluptates eum, odit deserunt nisi voluptatum dolores sunt iusto! Commodi tenetur velit saepe dolores explicabo hic labore incidunt suscipit temporibus!
-			Dolor vel maiores molestias labore veritatis expedita asperiores excepturi sapiente numquam! Ab temporibus ratione, aliquid ipsa velit incidunt molestias, iusto consectetur quia quos eum minus exercitationem deserunt maxime maiores neque.
-			Dolorem sunt ab dicta esse culpa facere doloremque repellat ea vel iusto, quo consequatur magnam quas omnis itaque quisquam nulla! Ut illo vel corrupti sed neque ab nemo! Delectus, quas!
-			Iure culpa deserunt hic, quo perspiciatis enim ut. Aliquam sequi laudantium fugiat eius recusandae, illum nulla error temporibus. Quos consequatur at nihil ullam modi odit incidunt dolores? Provident, similique unde.
-			Quidem maiores molestiae nulla ipsam eaque repellendus natus, a voluptatibus repudiandae distinctio placeat aut magni et reprehenderit. Sit quos cum, in explicabo iure assumenda. Deleniti, enim? Tempore sunt laudantium labore.
-			Similique sequi dolorum labore officiis numquam inventore harum voluptates pariatur ipsam minima fuga facilis quisquam accusamus, hic obcaecati? Impedit quos nulla ipsam totam quibusdam ipsum? Alias odio sunt totam dicta.
-			Quisquam iste vel recusandae adipisci deserunt, nesciunt numquam rem veniam maiores sed voluptates ipsa quod optio accusamus maxime rerum magni architecto. Ad ex, qui ratione voluptate corrupti magni ea pariatur.
-			Illo, eius atque. Ducimus, illum deserunt. Reiciendis quo accusamus explicabo beatae ullam fugit eaque sed, quasi deserunt error facilis alias velit nostrum blanditiis officiis suscipit quas et similique repellat repellendus.
-			Alias officiis eius eos hic laboriosam est dolores non ad dolorum asperiores nostrum magnam sed debitis quae quis, repellat adipisci fugiat et itaque in id. Excepturi, debitis architecto? Enim, laudantium.</p>
-		</section>
+		<main class="secret-section">
+			<article>	  
+			  <section class="section hero" aria-label="hero" id="home" data-section style="background-image: url('../src/assets/images/hero-banner.jpg')">
+				 <div class="container">
+					<p class="hero-subtitle">Fitness & Nutrition</p>
+					<h1 class="h1 hero-title">This lifestyle is for you.</h1>
+					<p class="hero-text">
+						Health blooms in the synergy of exercise and greens, nurturing both body and soul.
+					</p>
+					<a href="#course" class="btn btn-secondary">Start Course</a>
+					<div class="social-wrapper">
+					  <p class="social-title">Connect with us:</p>
+					  <ul class="social-list">
+						 <li>
+							<a href="#" class="social-link">
+							  <ion-icon name="logo-facebook"></ion-icon>
+							</a>
+						 </li>
+						 <li>
+							<a href="#" class="social-link">
+							  <ion-icon name="logo-skype"></ion-icon>
+							</a>
+						 </li>
+						 <li>
+							<a href="#" class="social-link">
+							  <ion-icon name="logo-twitter"></ion-icon>
+							</a>
+						 </li>
+						 <li>
+							<a href="#" class="social-link">
+							  <ion-icon name="logo-linkedin"></ion-icon>
+							</a>
+						 </li>
+					  </ul>
+					</div>
+				 </div>
+			  </section>
 
-		<script src="./bundle.js" defer></script>
+			  <section class="section about" aria-label="about" id="about" data-section>
+				<div class="container">
+				  <div class="about-banner img-holder" width="470" height="580">
+					 <img src="../src/assets/images/about-banner.jpg" width="470" height="580" loading="lazy" alt="about banner"
+						class="img-cover">
+					 <a href="#" class="btn btn-secondary">Meet Instructor</a>
+				  </div>
+				  <div class="about-content">
+					 <p class="section-subtitle">25+ Years Of Experience</p>
+					 <h2 class="h2 section-title">We have expert instructor for help our students.</h2>
+					 <p class="section-text">
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus doloribus repudiandae nihil reiciendis. Minima dignissimos pariatur, illo impedit, nam atque at esse ratione laudantium debitis quia et, earum magni quibusdam.
+					 </p>
+					 <h3 class="about-h3">100+ Courses</h3>
+					 <p class="section-text">
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae mollitia itaque laudantium necessitatibus distinctio. Dignissimos, voluptatibus fuga. Consequuntur beatae autem vel, tenetur saepe necessitatibus. Voluptas facilis error dicta consequuntur iusto!
+					 </p>
+				  </div>
+				</div>
+			 </section>
+
+			</article>
+		</main>
+
+		<footer class="footer">
+			<div class="footer-top section" data-section>
+				<div class="container">
+					<div class="footer-list">
+						<p class="footer-list-title">Subscribe Newsletter</p>
+						<p class="footer-list-text">
+							Join our community of wellness enthusiasts and take the first step towards a healthier, happier you! Subscribe now to VitalVibe newsletter and let's embark on this journey together!
+						</p>
+						<form action="" class="footer-form">
+							<input type="email" name="email_address" aria-label="email" placeholder="Enter email" required class="email-field">
+							<button type="submit" class="btn btn-secondary">Subscribe Now</button>
+						</form>
+					</div>
+					<ul class="footer-list">
+						<li>
+							<p class="footer-list-title">All Courses</p>
+						</li>
+						<li>
+							<a href="#" class="footer-link">Daily Exercise</a>
+						</li>
+						<li>
+							<a href="#" class="footer-link">Find Your Balance</a>
+						</li>
+						<li>
+							<a href="#" class="footer-link">Personal Program</a>
+						</li>
+						<li>
+							<a href="#" class="footer-link">Natural Process</a>
+						</li>
+						<li>
+							<a href="#" class="footer-link">Immune System</a>
+						</li>
+						<li>
+							<a href="#" class="footer-link">Gives You Energy</a>
+						</li>
+					</ul>
+	  
+					<ul class="footer-list">
+						<li>
+							<p class="footer-list-title">Help Links</p>
+						</li>
+						<li>
+							<a href="#" class="footer-link">Privacy Policy</a>
+						</li>
+						<li>
+							<a href="#" class="footer-link">Discussion</a>
+						</li>
+						<li>
+							<a href="#" class="footer-link">Terms & Conditions</a>
+						</li>
+						<li>
+							<a href="#" class="footer-link">Customer Support</a>
+						</li>
+						<li>
+							<a href="#" class="footer-link">Course FAQ's</a>
+						</li>
+						<li>
+							<a href="#" class="footer-link">Online Classes</a>
+						</li>
+					</ul>
+	  
+					<ul class="footer-list">
+						<li>
+							<p class="footer-list-title">Opening Hours</p>
+						</li>
+						<li>
+							<p class="adress">Mon-Fri: 9 AM - 6 PM</p>
+						</li>
+						<li>
+							<p class="adress">Saturday: 9 AM - 4 PM</p>
+						</li>
+						<li>
+							<p class="adress">Sunday: Closed</p>
+						</li>
+						<li>
+							<p class="footer-list-title address-title">Location</p>
+						</li>
+						<li>
+							<address class="address">
+								Rosenkrantz' gate 16,<br>
+								0160 Oslo
+							</address>
+						</li>
+					</ul>
+				</div>
+			</div>
+	  
+			<div class="footer-bottom">
+				<div class="container">
+					<p class="copyright">
+						&copy; 2024 VitalVibe Made With
+						<ion-icon name="heart" aria-hidden="true"></ion-icon>
+				 	</p>
+	  
+				 <ul class="footer-bottom-list">
+	  
+					<li class="footer-bottom-item">
+					  <a href="#" class="footer-bottom-link">Terms of Service</a>
+					</li>
+	  
+					<li class="footer-bottom-item">
+					  <a href="#" class="footer-bottom-link">Privacy Policy</a>
+					</li>
+	  
+					<li class="footer-bottom-item">
+					  <a href="#" class="footer-bottom-link">Sitemap</a>
+					</li>
+	  
+					<li class="footer-bottom-item">
+					  <a href="#" class="footer-bottom-link">Security</a>
+					</li>
+				 </ul>
+			  </div>
+			</div>
+		</footer>
+
+		<a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+			<ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+		 </a>
+	
+		<script src="./bundle.js"></script>
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 	</body>
 </html>

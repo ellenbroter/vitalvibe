@@ -101,7 +101,7 @@ function checkAuthStateAndRender() {
 
 checkAuthStateAndRender()
 
-/*
+
 
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const navLinks = document.querySelectorAll("[data-nav-link]");
@@ -121,4 +121,4 @@ addEventOnElem(navLinks, "click", closeNavbar);
 
 window.addEventListener("scroll", handleScroll);
 revealSections();
-addEventOnElem(window, "scroll", revealSections); */
+addEventOnElem(window, "scroll", revealSections);

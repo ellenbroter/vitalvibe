@@ -4,6 +4,7 @@ import { toggleNavbar, closeNavbar } from './navbar.js';
 import { firebaseConfig } from "/firebaseConfig"
 import { initializeApp } from "firebase/app"
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth"
+import { sortCourses } from './sorting.js';
 
 initializeApp(firebaseConfig)
 
@@ -122,3 +123,18 @@ addEventOnElem(navLinks, "click", closeNavbar);
 window.addEventListener("scroll", handleScroll);
 revealSections();
 addEventOnElem(window, "scroll", revealSections);
+
+
+// Sorting
+
+document.addEventListener("DOMContentLoaded", function() {
+  const sortButtons = document.querySelectorAll('.sort-button');
+  const courseList = document.querySelector('.list-items');
+
+  sortButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const sortBy = button.getAttribute('data-sort-by');
+      sortCourses(courseList, sortBy);
+    });
+  });
+});

@@ -11,8 +11,6 @@
 		<link rel="stylesheet" href="../src/css/style.css">
 		<link rel="stylesheet" href="../src/css/reset.css">
 		<link rel="stylesheet" href="../src/css/fonts.css">
-
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 	</head>
 
 	<body id="top">
@@ -133,15 +131,12 @@
 					  </div>
 					  
 					  <div class="sort-filt">
-						<button class="btn-sf btn-primary">Exercise</button>
-						<button class="btn-sf btn-primary">Nutrition</button>
-						<button class="btn-sf btn-primary">Lifestyle</button>
-						<button class="btn-sf btn-secondary">Latest</button>
-						<button class="btn-sf btn-secondary">Popular</button>
+						<button class="btn-sf btn-secondary sort-button" data-sort-by="latest">Latest</button>
+						<button class="btn-sf btn-secondary sort-button" data-sort-by="popular">Popular</button>
 					 </div>
-					  <ul class="grid-list">
+					  <ul class="grid-list list-items">
 						 <li>
-							<div class="course-card">
+							<div class="course-card" data-date="2024-05-20" data-popularity="71">
 							  <figure class="card-banner img-holder" width="350" height="300">
 								 <img src="../src/assets/images/courses-1.jpg" width="350" height="300" loading="lazy"
 									alt="Children Nutrition and Cooking" class="img-cover">
@@ -149,7 +144,7 @@
 							  <div class="card-content">
 								 <data class="card-price" value="98">$98</data>
 								 <p class="card-author">
-									<a href="#" class="card-link">
+									<a href="#course" class="card-link">
 									  By: <span class="span">Ryan Patterson</span>
 									</a>
 								 </p>
@@ -168,7 +163,7 @@
 							</div>
 						 </li>
 						 <li>
-							<div class="course-card">
+							<div class="course-card" data-date="2024-04-18" data-popularity="64">
 							  <figure class="card-banner img-holder"  width="350" height="300">
 								 <img src="../src/assets/images/courses-2.jpg" width="350" height="300" loading="lazy"
 									alt="Introduction to Food and Health." class="img-cover">
@@ -195,7 +190,7 @@
 							</div>
 						 </li>
 						 <li>
-							<div class="course-card">
+							<div class="course-card" data-date="2024-04-13" data-popularity="35">
 							  <figure class="card-banner img-holder"  width="350" height="300">
 								 <img src="../src/assets/images/courses-3.jpg" width="350" height="300" loading="lazy"
 									alt="Nutrition and Lifestyle in Pregnancy" class="img-cover">
@@ -222,7 +217,7 @@
 							</div>
 						 </li>
 						 <li>
-							<div class="course-card">
+							<div class="course-card" data-date="2024-03-26" data-popularity="76">
 							  <figure class="card-banner img-holder"  width="350" height="300">
 								 <img src="../src/assets/images/courses-4.jpg" width="350" height="300" loading="lazy"
 									alt="Expertise on Fitness, Nutrition and Health" class="img-cover">
@@ -249,7 +244,7 @@
 							</div>
 						 </li>
 						 <li>
-							<div class="course-card">
+							<div class="course-card" data-date="2024-01-06" data-popularity="58">
 							  <figure class="card-banner img-holder"  width="350" height="300">
 								 <img src="../src/assets/images/courses-5.jpg" width="350" height="300" loading="lazy"
 									alt="Hacking exercise for health new science of fitness" class="img-cover">
@@ -276,7 +271,7 @@
 							</div>
 						 </li>
 						 <li>
-							<div class="course-card">
+							<div class="course-card" data-date="2023-11-22" data-popularity="85">
 							  <figure class="card-banner img-holder"  width="350" height="300">
 								 <img src="../src/assets/images/courses-6.jpg" width="350" height="300" loading="lazy"
 									alt="Designing Your Personal Weight Loss Plan" class="img-cover">
@@ -305,7 +300,6 @@
 					  </ul>
 					</div>
 				</section>
-
 			</article>
 		</main>
 

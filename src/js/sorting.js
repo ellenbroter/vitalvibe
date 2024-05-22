@@ -1,4 +1,4 @@
-export function sortCourses(courseList, criteria) {
+function sortCourses(courseList, criteria) {
 	const courses = Array.from(courseList.children);
 	courses.sort((a, b) => {
 	  const aData = a.querySelector('.course-card').dataset;
@@ -14,3 +14,5 @@ export function sortCourses(courseList, criteria) {
 	courseList.innerHTML = '';
 	courses.forEach(course => courseList.appendChild(course));
  }
+
+ export { sortCourses };

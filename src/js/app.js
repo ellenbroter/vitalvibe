@@ -126,7 +126,6 @@ addEventOnElem(window, "scroll", revealSections);
 
 
 // Sorting
-
 document.addEventListener("DOMContentLoaded", function() {
   const sortButtons = document.querySelectorAll('.sort-button');
   const courseList = document.querySelector('.list-items');

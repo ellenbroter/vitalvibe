@@ -9,15 +9,6 @@ body {
 	height: 100vh;
 }
 
-header {
-	width: 100%;
-	height: 3rem;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 1rem;
-}
-
 form {
 	width: 15rem;
 	display: flex;
@@ -33,7 +24,6 @@ form {
 .sign-out-button {
 	display: none;
 }
-
 
 .container { 
 	padding-inline: 15px; 
@@ -212,6 +202,83 @@ form {
   height: 100%;
   object-fit: cover;
 }
+
+.section-subtitle {
+  color: hsl(165, 77%, 17%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-block-end: 15px;
+}
+
+.section-title { 
+  text-align: center; 
+}
+
+.section-text { 
+  font-size: 1.5rem; 
+}
+
+.title-wrapper {
+  position: relative;
+  padding-block: 40px;
+  margin-block-end: 50px;
+  z-index: 1;
+}
+
+.title-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 160px;
+  background-image: url('../assets/images/title-shape-white.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: -1;
+}
+
+.card-link {
+  color: hsl(210, 3%, 62%);
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: 0.5s ease;
+}
+
+.card-link .span {
+  display: inline-block;
+  color: hsl(32, 24%, 14%);
+  transition: 0.5s ease;
+}
+
+.card-meta-list {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.card-meta-item {
+  position: relative;
+  color: hsl(38, 100%, 50%);
+  font-size: 1.4rem;
+}
+
+.card-meta-item:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: -15px;
+  width: 4px;
+  height: 4px;
+  background-color: hsl(165, 77%, 17%);
+  border-radius: 50%;
+}
+
 .hero {
   padding-block: 130px 80px;
   background-repeat: no-repeat;
@@ -340,6 +407,39 @@ form {
   margin-block: 30px 10px;
 }
 
+/* COURSE */
+.course-card .card-banner { 
+  margin-block-end: 30px; 
+}
+
+.course-card .card-content {
+  position: relative;
+  padding: 20px;
+  padding-block-end: 15px;
+}
+
+.course-card .card-price {
+  background-color: hsl(165, 77%, 17%);
+  color: white;
+  font-weight: 700;
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  margin-inline: auto;
+  margin-block-start: -80px;
+  margin-block-end: 20px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+.course-card .card-title {
+  margin-block: 10px 20px;
+  transition: 0.25s ease;
+}
+.course-card .card-title:is(:hover, :focus) {
+  color: hsl(38, 100%, 50%); 
+}
+
 /* FOOTER */
 
 .footer-top {
@@ -367,7 +467,7 @@ form {
 .footer-top .email-field {
   background-color: white;
   color: hsl(32, 24%, 14%);
-  padding: 11px 30px;
+  padding: 11px 20px;
   border-radius: 10px;
   margin-block-end: 20px;
 }
@@ -377,7 +477,7 @@ form {
 }
 
 .footer-top .btn-secondary { 
-  border-radius: 10px; 
+  border-radius: 50px; 
 }
 
 .footer-top .btn-secondary:is(:hover, :focus) {
@@ -513,6 +613,9 @@ address {
   .about-h3 {
     font-size: 3rem; 
   }
+  .course .grid-list { 
+    grid-template-columns: 1fr 1fr; 
+  }
   .footer-top .container {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 30px;
@@ -544,6 +647,19 @@ address {
   }
   .about .section-title { 
     font-size: 5.7rem;
+  }
+  .course-card .card-price {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    margin-block-start: -100px;
+  }
+  .course-card .h3 {
+    font-size: 2.4rem; 
+  }
+  .course-card .card-content {
+    padding: 30px;
+    padding-block-end: 25px;
   }
 }
 
@@ -595,13 +711,17 @@ address {
     gap: 50px;
   }
   .about-banner { 
-    margin-block-end: 0; }
+    margin-block-end: 0; 
+  }
   .about-content { 
-    padding: 40px; }
+    padding: 40px; 
+  }
   .about .section-title {
-     font-size: 4.4rem; }
+    font-size: 4.4rem; 
+  }
   .about-h3 { 
-    font-size: 2.4rem; }
+    font-size: 2.4rem; 
+  }
   .footer-top .container { 
     grid-template-columns: 1fr 0.6fr 0.6fr 0.65fr; 
   }

@@ -141,20 +141,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // API
 
-// Opprette en funksjon for å hente og sortere fruktlisten
 function fetchFruits() {
   fetch("http://localhost:5050")
     .then(response => response.json())
     .then(data => {
-      // Sortere fruktene alfabetisk
+
       const sortedFruits = data.sort((a, b) => a.name.localeCompare(b.name));
-      // Oppdatere fruktlisten i DOM
+
       updateFruitsList(sortedFruits);
     })
     .catch(error => console.error('Error fetching fruits:', error));
 }
 
-// Oppdatere fruktlisten i DOM
 function updateFruitsList(fruits) {
   const fruitsListContainer = document.getElementById('fruits-list');
   fruitsListContainer.innerHTML = '';
@@ -166,7 +164,6 @@ function updateFruitsList(fruits) {
   });
 }
 
-// Kalle fetchFruits når siden lastes
 document.addEventListener('DOMContentLoaded', fetchFruits);
 
 

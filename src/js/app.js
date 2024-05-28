@@ -145,25 +145,68 @@ function fetchFruits() {
   fetch("http://localhost:5050")
     .then(response => response.json())
     .then(data => {
+      const limitedFruits = data.slice(0, 10);
 
-      const sortedFruits = data.sort((a, b) => a.name.localeCompare(b.name));
-
-      updateFruitsList(sortedFruits);
+      updateFruitsList(limitedFruits);
     })
     .catch(error => console.error('Error fetching fruits:', error));
 }
 
 function updateFruitsList(fruits) {
-  const fruitsListContainer = document.getElementById('fruits-list');
+  const fruitsListContainer = document.querySelector('.fruits-list');
   fruitsListContainer.innerHTML = '';
 
   fruits.forEach(fruit => {
     const listItem = document.createElement('li');
-    listItem.textContent = fruit.name;
+
+    const blogCard = document.createElement('div');
+    blogCard.className = 'blog-card';
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'wrapper';
+
+    const cardTitle = document.createElement('h3');
+    cardTitle.className = 'h3 card-title';
+    cardTitle.textContent = fruit.name;
+
+    const cardMetaList = document.createElement('ul');
+    cardMetaList.className = 'card-meta-list';
+
+    const cardMetaItem = document.createElement('li');
+    cardMetaItem.className = 'card-meta-item';
+
+    const itemText = document.createElement('p');
+    itemText.className = 'item-text';
+    itemText.textContent = 'Nutritions (per 100g)';
+
+    cardMetaItem.appendChild(itemText);
+    cardMetaList.appendChild(cardMetaItem);
+
+    const cardAuthor = document.createElement('ul');
+    cardAuthor.className = 'card-author';
+
+    const createCardLink = (label, value) => {
+      const cardLink = document.createElement('li');
+      cardLink.className = 'card-link';
+      cardLink.innerHTML = `${label}: <span class="span">${value}</span>`;
+      return cardLink;
+    };
+
+    cardAuthor.appendChild(createCardLink('Calories', fruit.nutritions.calories));
+    cardAuthor.appendChild(createCardLink('Fat', fruit.nutritions.fat));
+    cardAuthor.appendChild(createCardLink('Sugar', fruit.nutritions.sugar));
+    cardAuthor.appendChild(createCardLink('Carbohydrates', fruit.nutritions.carbohydrates));
+    cardAuthor.appendChild(createCardLink('Protein', fruit.nutritions.protein));
+
+    wrapper.appendChild(cardTitle);
+    wrapper.appendChild(cardMetaList);
+    wrapper.appendChild(cardAuthor);
+
+    blogCard.appendChild(wrapper);
+    listItem.appendChild(blogCard);
     fruitsListContainer.appendChild(listItem);
   });
 }
 
 document.addEventListener('DOMContentLoaded', fetchFruits);
-
 

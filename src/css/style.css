@@ -458,6 +458,14 @@ form {
   color: hsl(38, 100%, 50%); 
 }
 
+/* FRUIT NUTRITIONS */
+
+.fruits-list {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr;
+}
+
 /* FOOTER */
 
 .footer-top {
@@ -634,6 +642,9 @@ address {
   .course .grid-list { 
     grid-template-columns: 1fr 1fr; 
   }
+  .fruits-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .footer-top .container {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 30px;
@@ -678,6 +689,9 @@ address {
   .course-card .card-content {
     padding: 30px;
     padding-block-end: 25px;
+  }
+  .fruits-list {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -740,6 +754,9 @@ address {
   .about-h3 { 
     font-size: 2.4rem; 
   }
+  .fruits-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
   .footer-top .container { 
     grid-template-columns: 1fr 0.6fr 0.6fr 0.65fr; 
   }
@@ -788,6 +805,9 @@ address {
     font-size: 5.7rem; }
   .about-h3 { 
     font-size: 3rem; }
+    .fruits-list {
+      grid-template-columns: repeat(5, 1fr);
+    }
   .footer-top .container { 
     column-gap: 100px; 
   }

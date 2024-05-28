@@ -5,6 +5,7 @@ import { firebaseConfig } from "../../firebaseConfig.js"
 import { initializeApp } from "firebase/app"
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth"
 import { sortCourses } from './sorting.js';
+import { fetchFruits } from './fruitApi.js';
 
 initializeApp(firebaseConfig)
 
@@ -140,25 +141,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 // API
-
-function fetchFruits() {
-  fetch("http://localhost:5050")
-    .then(response => response.json())
-    .then(data => {
-      const limitedFruits = data.slice(0, 10);
-
-      updateFruitsList(limitedFruits);
-    })
-    .catch(error => console.error('Error fetching fruits:', error));
-}
-
 function updateFruitsList(fruits) {
   const fruitsListContainer = document.querySelector('.fruits-list');
   fruitsListContainer.innerHTML = '';
 
   fruits.forEach(fruit => {
     const listItem = document.createElement('li');
-
     const blogCard = document.createElement('div');
     blogCard.className = 'blog-card';
 
@@ -166,7 +154,7 @@ function updateFruitsList(fruits) {
     wrapper.className = 'wrapper';
 
     const cardTitle = document.createElement('h3');
-    cardTitle.className = 'h3 card-title';
+    cardTitle.className = 'card-title';
     cardTitle.textContent = fruit.name;
 
     const cardMetaList = document.createElement('ul');
@@ -208,5 +196,8 @@ function updateFruitsList(fruits) {
   });
 }
 
-document.addEventListener('DOMContentLoaded', fetchFruits);
-
+document.addEventListener('DOMContentLoaded', () => {
+  fetchFruits()
+    .then(limitedFruits => updateFruitsList(limitedFruits))
+    .catch(error => console.error('Error fetching and updating fruits:', error));
+});

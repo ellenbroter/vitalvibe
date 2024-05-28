@@ -1,4 +1,4 @@
-export function fetchFruits() {
+function fetchFruits() {
 	return fetch("http://localhost:5050")
 	  .then(response => response.json())
 	  .then(data => data.slice(0, 10))
@@ -7,3 +7,5 @@ export function fetchFruits() {
 		 return [];
 	  });
  }
+
+ export { fetchFruits };

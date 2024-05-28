@@ -96,7 +96,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hea
   \****************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   fetchFruits: () => (/* binding */ fetchFruits)\n/* harmony export */ });\nfunction fetchFruits() {\n  return fetch(\"http://localhost:5050\").then(function (response) {\n    return response.json();\n  }).then(function (data) {\n    return data.slice(0, 10);\n  })[\"catch\"](function (error) {\n    console.error('Error fetching fruits:', error);\n    return [];\n  });\n}\n\n//# sourceURL=webpack://final-assignment/./src/js/fruitApi.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   fetchFruits: () => (/* binding */ fetchFruits)\n/* harmony export */ });\nfunction fetchFruits() {\n  return fetch(\"http://localhost:5050\").then(function (response) {\n    return response.json();\n  }).then(function (data) {\n    return data.slice(0, 10);\n  })[\"catch\"](function (error) {\n    console.error('Error fetching fruits:', error);\n    return [];\n  });\n}\n\n\n//# sourceURL=webpack://final-assignment/./src/js/fruitApi.js?");
 
 /***/ }),
 

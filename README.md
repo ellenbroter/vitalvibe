@@ -18,7 +18,7 @@ The VitalVibe Health and Fitness Portal is a web application designed to provide
 - Netlify [https://www.vitalvibe-byellen.netlify.app/](https://vitalvibe-byellen.netlify.app/)
 
 ## Disclaimer
-Please note that this project requires the usage of the 'npm run server' command to properly render data from the Fruityvice API.
+Please note that this project requires the usage of the ´npm run server´ command to properly render data from the Fruityvice API.
 
 ## Image Credits
 All images used in this project are sourced from [Pexels](https://www.pexels.com).

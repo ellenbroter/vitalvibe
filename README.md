@@ -15,6 +15,7 @@ The VitalVibe Health and Fitness Portal is a web application designed to provide
 - Webpack
 - Firebase Authentication
 - Fruityvice API
+- Netlify https://www.vitalvibe-byellen.netlify.app/
 
 ## Image Credits
 All images used in this project are sourced from [Pexels](https://www.pexels.com).
